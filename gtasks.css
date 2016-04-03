@@ -1,0 +1,21 @@
+.J-JB-KA-JB.J-JB-KA-a6O-Zq,
+table#_tbl .dp-cell.dp-weekend.dp-offmonth.dp-day-right {
+  color: #E88 !important;
+}
+
+.J-JB-KA-JB.J-JB-KA-a6O-Zq:not(.J-JB-KA-Ku-Kk),
+table#_tbl .dp-cell.dp-weekend.dp-onmonth.dp-day-right,
+table#_tbl .dp-cell.dp-weekend-selected.dp-onmonth-selected.dp-day-right {
+  color: #E22 !important;
+}
+
+.J-JB-KA-JB.J-JB-KA-a6O-Zj,
+table#_tbl .dp-cell.dp-weekend.dp-offmonth.dp-day-left {
+  color: #88F !important;
+}
+
+.J-JB-KA-JB.J-JB-KA-a6O-Zj:not(.J-JB-KA-Ku-Kk),
+table#_tbl .dp-cell.dp-weekend.dp-onmonth.dp-day-left,
+table#_tbl .dp-cell.dp-weekend-selected.dp-onmonth-selected.dp-day-left {
+  color: #22F !important;
+}

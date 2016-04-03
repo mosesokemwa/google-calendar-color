@@ -1,0 +1,22 @@
+{
+  "name": "Google Calendar Color",
+  "description": "Adds color to weekends in Google Calendar",
+  "version": "1.0",
+	"icons": {
+     "16": "calendar.png",
+     "48": "calendar.png",
+     "128": "calendar.png"
+  },
+	"content_scripts": [{
+    "matches": ["https://calendar.google.com/*"],
+    "js": ["content_script.js"]
+  }],
+	"background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+	"permissions":    [
+    "webNavigation", "tabs", "https://calendar.google.com/*", "https://mail.google.com/*"
+  ],
+  "manifest_version": 2
+}
