@@ -1,7 +1,7 @@
 {
   "name": "Google Calendar Color",
   "description": "Adds color to weekends in Google Calendar",
-  "version": "1.1",
+  "version": "1.1.1",
   "browser_action": {
     "default_title": "Edit the color scheme",
     "default_popup": "html/popup.html"
