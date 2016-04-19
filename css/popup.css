@@ -1,0 +1,15 @@
+body {
+  height:300px;
+  width:400px;
+}
+
+ul.color-settings {
+  list-style-type:none;
+  padding-left: 20px;
+}
+
+#preview-sat-bg, #preview-sat-font, #preview-sun-bg, #preview-sun-font {
+  border:1px solid gray;
+  width:20px;
+  height:20px;
+}

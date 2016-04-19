@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Edit Color Scheme</title>
+    <script src="../lib/jscolor.min.js"></script>
+    <script src="../js/popup.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/popup.css">
+  </head>
+  <body>
+    <p>The following colors can be customized.</p>
+    <ul>
+      <li>Saturday</li>
+      <table>
+        <tr>
+          <td>Background:</td>
+          <td><div id='preview-sat-bg'></div></td>
+          <td><input id="saturday-background-color" class="jscolor {styleElement:'preview-sat-bg',hash:true,closable:true,closeText:'close'}"></td>
+        </tr>
+        <tr>
+          <td>Font:</td>
+          <td><div id='preview-sat-font'></div></td>
+          <td><input id="saturday-font-color" class="jscolor {styleElement:'preview-sat-font',hash:true,closable:true,closeText:'close'}"></td>
+        </tr>
+      </table>
+      <li>Sunday</li>
+      <table>
+        <tr>
+          <td>Background:</td>
+          <td><div id='preview-sun-bg'></div></td>
+          <td><input id="sunday-background-color" class="jscolor {styleElement:'preview-sun-bg',hash:true,closable:true,closeText:'close'}"></td>
+        </tr>
+        <tr>
+          <td>Font:</td>
+          <td><div id='preview-sun-font'></div></td>
+          <td><input id="sunday-font-color" class="jscolor {styleElement:'preview-sun-font',hash:true,closable:true,closeText:'close'}"></td>
+        </tr>
+      </table>
+    </ul>
+    <input id="save" type="submit" value="save">
+  </body>
+</html>
