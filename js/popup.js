@@ -43,10 +43,10 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById("preview-sat-font").style.backgroundColor = colorSettings['sat_font'];
         }
         if (document.getElementById("sunday-background-color")) {
-            document.getElementById("sunday-background-color").value = colorSettings['sat_bg'];
+            document.getElementById("sunday-background-color").value = colorSettings['sun_bg'];
         }
         if (document.getElementById("preview-sun-bg")) {
-            document.getElementById("preview-sun-bg").style.backgroundColor = colorSettings['sat_bg'];
+            document.getElementById("preview-sun-bg").style.backgroundColor = colorSettings['sun_bg'];
         }
         if (document.getElementById("sunday-font-color")) {
             document.getElementById("sunday-font-color").value = colorSettings['sun_font'];
