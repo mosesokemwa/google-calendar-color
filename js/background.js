@@ -1,20 +1,19 @@
-var tabIdStartWdayMap = {};
-
 chrome.webNavigation.onCompleted.addListener(function(data) {
-    if (typeof data) {
-        if (data.url === "about:blank") {
-			chrome.webNavigation.getFrame({tabId:data.tabId, processId:data.processId, frameId:0}, function(details) {
-				if (details.url.indexOf("https://calendar.google.com") == 0 || details.url.indexOf("https://mail.google.com") == 0) {
-                    applyColorSettingsToGTasksCalendar(data.tabId, data.frameId);
-				}
-			});
+  if (typeof data) {
+    if (data.url === "about:blank") {
+      chrome.webNavigation.getFrame({tabId:data.tabId, processId:data.processId, frameId:0}, function(details) {
+        if (details.url.indexOf("https://calendar.google.com") == 0 || details.url.indexOf("https://mail.google.com") == 0) {
+          applyColorSettingsToGTasksCalendar(data.tabId, data.frameId);
         }
+      });
     }
+  }
 });
 
 function storeDefaultColorSettings() {
     chrome.storage.local.clear();
     var defaultColorSettings = {
+        firstDay: 'Auto',
         sat_bg:'#F0F3FC',
         sat_font:'#22F',
         sun_bg:'#FFF0EE',
@@ -104,19 +103,7 @@ function applyColorSettingsToCalendar(tabId, startWday) {
     });
 }
 
-chrome.storage.onChanged.addListener(function() {
-    chrome.storage.local.get(null, function(colorSettings) {
-        doApplyColorSettingsToGTasksCalendar(null, null, colorSettings);
-        for (var tabId in tabIdStartWdayMap) {
-            if (tabIdStartWdayMap.hasOwnProperty(tabId)) {
-                doApplyColorSettingsToCalendar(Number(tabId), colorSettings, tabIdStartWdayMap[tabId]);
-            }
-        }
-    });
-});
-
 chrome.runtime.onMessage.addListener(function(wday, sender) {
-    tabIdStartWdayMap[sender.tab.id] = wday;
     applyColorSettingsToCalendar(sender.tab.id, wday);
 });
 

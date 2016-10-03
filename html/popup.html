@@ -9,6 +9,14 @@
   <body>
     <p>The following colors can be customized.</p>
     <ul>
+      <li>Week starts on:
+        <select name='firstDay' id='firstDay'>
+          <option value='0' selected>Auto detect</option>
+          <option value='1'>Sunday</option>
+          <option value='2'>Monday</option>
+          <option value='3'>Saturday</option>
+        </select>
+      </li>
       <li>Saturday</li>
       <table>
         <tr>
@@ -36,6 +44,7 @@
         </tr>
       </table>
     </ul>
-    <input id="save" type="submit" value="save">
+    <input id="save" type="submit" value="Update (Needs page refresh)">
+    <input id="default" type="submit" value="Show default">
   </body>
 </html>
